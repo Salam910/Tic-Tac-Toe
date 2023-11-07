@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(50deg, #ff1458, #0085ff);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    top: 0px;
+    bottom: 0;
+}
+
+.game {
+    position: absolute;
+    top: 20px;
+    color: white;
+    width: 455px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    background: #ff1458;
+    margin: 20px 0;
+    padding: 20px 0;
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+.title span {
+    color: #0085ff;
+    padding: 10px;
+    letter-spacing: 2px;
+}
+
+.square {
+    width: 140px;
+    height: 140px;
+    float: left;
+    margin: 5px ;
+    background: #0085ff;
+    font-size: 100px;
+    font-weight: 600;
+    cursor: pointer;
+    animation: salam 2s both;
+    transition: .5s;
+}
+
+.square:hover {
+    background: #ff1458;
+}
+
+.button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 580px;
+    animation: salam 2s both;
+}
+
+.button .reset {
+    border: none;
+    outline: none;
+    margin: 20px;
+    padding: 15px 50px;
+    border-radius: 25px;
+    background: linear-gradient(50deg, #ff1458, #0085ff);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button .reset:hover {
+    background: linear-gradient(50deg, #0085ff, #ff1458);
+}
+
+.salam {
+    position: absolute;
+    bottom: 20px;
+    background: linear-gradient(50deg, #0085ff, #ff1458);
+    border-radius: 20px;
+    padding: 10px;
+    color: #0085ff;
+    animation: sa 2s both;
+}
+
+@keyframes salam {
+    0% {
+        transform: translateX(-300px) rotateZ(90deg);
+    }
+
+    25% {
+        transform: translateX(300px) rotateZ(120deg);
+
+    }
+    50% {
+        transform:  translateX(30px) rotateZ(20deg);
+    }
+    75% {
+        /* transform: translateX(-300px) rotateZ(-60deg); */
+    }
+    100% {
+        transform:  translateX(0px) rotateZ(0deg);
+    }
+}
+
+@keyframes sa {
+    0% {
+        transform: translateX(-300px) rotateZ(90deg);
+    }
+    50% {
+        transform: translateY(-300px) rotateZ(120deg);
+    }
+    100% {
+        transform:  translateX(0px) rotateZ(0deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .game {
+        top: 20px;
+        width: 330px;
+    }
+    
+    .title {
+        margin: 15px 0;
+        padding: 15px 0;
+    }
+
+    .square {
+        width: 100px;
+        height: 100px;
+        font-size: 80px;
+    }
+
+    .button {
+        top: 430px;
+    }
+
+    .salam {
+        bottom: 140px;
+    }
+}
